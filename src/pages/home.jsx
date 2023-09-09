@@ -19,7 +19,7 @@ function Home() {
         const fetchData = async (searchString) => {
           try {
             const responsePosts = await axios.get(
-              `https://www.omdbapi.com/?s=${searchString}&apikey=${API_KEY}`
+              `https://www.omdbapi.com/?s=${searchString}&apikey=${API_KEY}&plot`
             );
             updatePeliLista(responsePosts.data);
             console.log("Peliculas obtenidas!", responsePosts.data)

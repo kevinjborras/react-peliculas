@@ -6,7 +6,7 @@ Generate API key from : http://www.omdbapi.com/apikey.aspx
 # Librerias usadas:
 
 Axios para el API
-TaildwindCSS para el CSS
+TaildwindCSS para el CSS (faltan aplicar clases)
 
 # React + Vite
 
