@@ -5,12 +5,12 @@ function HomeComponent({ peliLista }) {
     console.log(peliLista);
 
     if (!peliLista || !peliLista.Search) {
-        return <div>No existen peliculas con ese nombre.</div>;
+        return <div>Cargando...</div>;
     }
     return (
-        <div className='grid grid-cols-6 gap-4'>
+        <div className='p-5 bg-primary-300 grid grid-cols-5 gap-4'>
             {peliLista.Search.length === 0 ? (
-                <div>No existen peliculas con ese nombre.</div>
+                <div>No hay peliculas con ese nombre.</div>
             ) : (
                 peliLista.Search.map((movie, index) => (
                     <div className="bg-white rounded-lg shadow-md p-4 text-center" key={index}>

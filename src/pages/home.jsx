@@ -1,6 +1,7 @@
 import React from 'react'
 import HomeComponent from '../componentes/home/homeComponent'
 import NavBar from '../componentes/navbar/navbar';
+import Footer from '../componentes/Footer/Footer';
 import { useState } from 'react';
 import axios from 'axios';
 import { useEffect } from 'react';
@@ -45,6 +46,7 @@ function Home() {
     <div>
         <NavBar onSearch={updateSearchQuery} />
         {peliLista && <HomeComponent peliLista={peliLista}/>}
+        <Footer/>
     </div>
   )
 }
