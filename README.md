@@ -1,12 +1,12 @@
 # Api Usada:
 [The Open Movie Database APIs](http://www.omdbapi.com/)
 
-Generate API key from : http://www.omdbapi.com/apikey.aspx
+Key Generada en : http://www.omdbapi.com/apikey.aspx
 
 # Librerias usadas:
 
-Axios para el API
-TaildwindCSS para el CSS (faltan aplicar clases)
+Axios para el API <br />
+TaildwindCSS para el CSS
 
 # React + Vite
 
