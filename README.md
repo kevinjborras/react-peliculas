@@ -1,7 +1,10 @@
 # Api Usada:
-[The Open Movie Database APIs](http://www.omdbapi.com/)
-
+Para Informacion:
+[The Open Movie Database APIs(TOMD)](http://www.omdbapi.com/)
 Key Generada en : http://www.omdbapi.com/apikey.aspx
+
+Para trailers:
+[The Movie Database(TMBD)](https://www.themoviedb.org)
 
 # Librerias usadas:
 
