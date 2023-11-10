@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const fetchMovieTrailers = async (movieName, apiKey) => {
+export const BuscarTrailerDePeli = async (movieName, apiKey) => {
   try {
     const response = await axios.get(
       `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${encodeURIComponent(
