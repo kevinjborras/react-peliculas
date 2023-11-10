@@ -1,6 +1,8 @@
 //Categorias?
 import React, { useState } from 'react';
-import hollywoodlogo from '../../assets/hollywoodlogo.png'
+import logo from '../../assets/logo.png'
+import {Link} from 'react-router-dom';
+import { HOME } from '../../routes/path';
 
 function NavBar({ onSearch }) {
   const [searchString, setSearchString] = useState('');
@@ -21,7 +23,9 @@ function NavBar({ onSearch }) {
   return (
 <form onSubmit={handleSearch}>
       <div id='searchbar' className='bg-primary-100 py-5 flex justify-center items-center'>
-        <img src={hollywoodlogo} alt="" className='w-80 y-30' />
+        <Link to={HOME}>
+          <img src={logo} alt="" className='w-80 y-30' />
+        </Link>
         <input
           type="text"
           placeholder="Pelicula..."
@@ -36,6 +40,17 @@ function NavBar({ onSearch }) {
         >
           Buscar
         </button>
+        <Link to={HOME}>
+          <button
+            type='submit'
+            className="m-2 px-4 py-2 bg-green-400 text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-300"
+          >
+            Home
+          </button>
+        </Link>
+      </div>
+      <div className='bg-primary-100 py-5 flex justify-center items-center'>
+        <p className='text-white bold' style={{ fontWeight: 'bold' }}>EL PLACER DEL ENTRETENIMIENTO</p>
       </div>
     </form>
   );

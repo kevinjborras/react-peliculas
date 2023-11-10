@@ -1,7 +1,7 @@
-import { HOME } from "./routes/path"
+import { HOME, PELICULA } from "./routes/path"
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import PublicRoute from "./componentes/router/PublicRoute";
 import Home from "./pages/home";
+import Peliculas from "./pages/peliculas";
 import './css/index.css'
 
 function App() {
@@ -12,6 +12,7 @@ function App() {
         <Routes basename="home">
             <Route path="/" element={<Navigate to="/home" />} />
             <Route path={HOME} exact element={<Home />}  />
+            <Route path={`${PELICULA}/:movieName`} element={<Peliculas />} />
         </Routes>
       </BrowserRouter>
     </div>

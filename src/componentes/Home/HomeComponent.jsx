@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from "react-router-dom";
+import { PELICULA } from '../../routes/path';
 
 function HomeComponent({ peliLista }) {
 
@@ -13,15 +15,14 @@ function HomeComponent({ peliLista }) {
                 <div>No hay peliculas con ese nombre.</div>
             ) : (
                 peliLista.Search.map((movie, index) => (
+                    <Link to={`${PELICULA}/${encodeURIComponent(movie.Title)}`} key={index}>
                     <div className="bg-white rounded-lg shadow-md p-4 text-center" key={index}>
                         <img src={movie.Poster} alt={movie.Title} />
                         <h1 className='mt-2 text-lg font-semibold'>{movie.Title}</h1>
                         <p>{movie.Year}</p>
                         <p>{movie.Type === 'movie' ? 'Pelicula' : movie.Type}</p>
-                        {/*```````````````No se viene la trama en el JSON???????? 
-                        <h1 className='mt-2'>{movie.Plot}</h1>
-                        */}
                     </div>
+                    </Link>
                 ))
             )}
         </div>
